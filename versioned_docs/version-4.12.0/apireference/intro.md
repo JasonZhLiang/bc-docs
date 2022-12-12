@@ -12,7 +12,7 @@ name = input()
 print(f"hello {name}")
 ```
 
-40527 | <font size="-1">INVALID_RUN_STATE </font><br/>
+
 
 ## comment
 [This is hidden by using #]: #
@@ -52,8 +52,3 @@ show a image ![alter text](level1/image-demo.png)
 
 >block quote -- spacial note
 
-#### Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being deleted. 
-deleteCriteria | The delete criteria to be applied. 

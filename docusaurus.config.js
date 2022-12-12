@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'test Site',
+  title: 'brainCloud docs',
   // tagline: 'Dinosaurs are cool',
   url: 'https://jasonzhliang.github.io',
   baseUrl: '/bc-docs/',
@@ -40,6 +40,14 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/JasonZhLiang/bc-docs/tree/main/',
+          versions: {
+            current: {
+              label: 'current',
+            },
+          },
+          lastVersion: 'current',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
@@ -100,6 +108,10 @@ const config = {
           //   label: 'GitHub',
           //   position: 'right',
           // },
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+          },
           {
             href: 'https://github.com/JasonZhLiang/bc-docs',
             position: 'right',
