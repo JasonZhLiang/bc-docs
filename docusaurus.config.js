@@ -8,12 +8,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'test Site',
   // tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://jasonzhliang.github.io',
+  baseUrl: '/bc-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  titleDelimiter: '🦖', // Defaults to `|`
+  // titleDelimiter: '🦖', // Defaults to `|`
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -58,6 +58,22 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        appId: 'R2IYF7ETH7',
+        apiKey: '599cec31baffa4868cae4e79f180729b',
+        indexName: 'docsearch',
+        contextualSearch: true,
+      },
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        },
+      },
+      announcementBar: {
+        id: 'announcementBar-2', // Increment on change
+        content: `⭐️ Announcement bar goes here, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/JasonZhLiang/bc-docs/">GitHub</a>`,
+      },
       navbar: {
         title: 'brainCloud Docs',
         logo: {
@@ -79,10 +95,16 @@ const config = {
             label: 'API',
           },
           { to: '/blog', label: 'Blog', position: 'left' },
+          // {
+          //   href: 'https://github.com/JasonZhLiang/bc-docs',
+          //   label: 'GitHub',
+          //   position: 'right',
+          // },
           {
             href: 'https://github.com/JasonZhLiang/bc-docs',
-            label: 'GitHub',
             position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
           },
         ],
       },
