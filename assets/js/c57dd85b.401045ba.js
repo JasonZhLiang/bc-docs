@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusauruns_ts=self.webpackChunkdocusauruns_ts||[]).push([[6394],{5607:s=>{s.exports=JSON.parse('{"label":"hello","permalink":"/bc-docs/blog/tags/hello","allTagsPath":"/bc-docs/blog/tags","count":2}')}}]);
