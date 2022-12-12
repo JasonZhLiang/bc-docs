@@ -8,6 +8,10 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import styles from './index.module.css';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
+import BrowserWindow from '@site/src/components/BrowserWindow';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
