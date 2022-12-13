@@ -9,7 +9,8 @@ const config = {
   title: 'brainCloud docs',
   // tagline: 'Dinosaurs are cool',
   url: 'https://jasonzhliang.github.io',
-  baseUrl: '/bc-docs/',
+  // baseUrl: '/bc-docs/', // for github page must attach a repository name after url
+  baseUrl: '/', // for netlify
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
