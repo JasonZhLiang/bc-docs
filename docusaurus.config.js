@@ -8,8 +8,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'brainCloud docs',
   // tagline: 'Dinosaurs are cool',
-  url: 'https://jasonzhliang.github.io',
+  // url: 'https://jasonzhliang.github.io',
   // baseUrl: '/bc-docs/', // for github page must attach a repository name after url
+  url: 'https://brainclouddocs.netlify.app',
   baseUrl: '/', // for netlify
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
