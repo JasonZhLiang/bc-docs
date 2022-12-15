@@ -1,14 +1,96 @@
 ---
 displayed_sidebar: apiSidebar
+data: codePrefix
 ---
 
-# doc with the same level of subfolder level 1
+# referencing variables from MD
+
+see [the link](https://github.com/facebook/docusaurus/issues/5700) that mentions this  
+and [this](https://github.com/facebook/docusaurus/issues/395)
+
+
+```mdx-code-block
+import config from '@site/docusaurus.config.js';
+```
+
+
+The website is called
+<>{config.title}</>
+or  <br/>
+{`hello${config.title}`}
+
+referecing from a link
+<a href={`https://github.com/user/project/blob/${codeprefix}/file`}>a link to the latest version</a>
+{`${codeprefix}`}
+
 
 ```mdx-code-block
 import BrowserWindow from '@site/src/components/BrowserWindow';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 ```
+
+```mdx-code-block
+import codeprefix from './commondata.ts';
+codeprefix
+```
+nothing surround
+
+<p>{codeprefix}</p>
+{`${codeprefix}`}
+
+```js title="sidebars.js"
+// highlight-start
+${codeprefix}.aaa
+```
+
+<pre><code>
+{`var codeprefix = "${codeprefix}";
+var ss = 'asdf';
+
+return ss;`}
+</code></pre>
+
+don't know what {...{"className": "language-groovy"}} does
+<pre>
+<code parentName="pre" {...{"className": "language-groovy"}}>
+{`${codeprefix};
+var ss = 'asdf';
+
+return ss; `}
+</code>
+</pre>
+
+
+
+
+
+
+export var number = 999;
+
+shows the value of a defined variable inside this md file 
+<>{number}</>
+
+
+
+
+
+
+
+
+The front matter of this page:
+
+<ul>
+  {Object.entries(frontMatter).map(([key, value]) => <li key={key}><b>{key}</b>: {value}</li>)}
+</ul>
+
+show one value of frontMatter
+
+
+<>
+  {frontMatter.data}
+</>
+{`${frontMatter.displayed_sidebar}`}
 
 :::caution
 

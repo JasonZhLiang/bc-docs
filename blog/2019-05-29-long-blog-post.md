@@ -5,6 +5,16 @@ authors: endi
 tags: [hello, docusaurus]
 ---
 
+get frontMatter details:
+
+<ul>
+  {Object.entries(frontMatter).map(([key, value]) => <li key={key}><b>{key}</b>: {value}</li>)}
+</ul>
+
+<div>
+  {frontMatter.authors}
+</div>
+
 This is the summary of a very long blog post,
 
 Use a `<!--` `truncate` `-->` comment to limit blog post size in the list view.

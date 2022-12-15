@@ -89,6 +89,14 @@ module.exports = {
 function helloWorld() {
   console.log('Hello, world!');
 }
+var ownerId = "internalPlayerId";
+var matchId = "matchId";
+
+<%= data.branding.codePrefix %>.asyncMatch.completeMatch(ownerId, matchId, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
 ```
 
 ```mdx-code-block

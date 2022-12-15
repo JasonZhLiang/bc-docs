@@ -4,6 +4,21 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+// add the customized remark to interpolate viriables
+const interpolatev = require("./src/remark/interpolatev");
+const sectionPrefix = require('./src/remark/section-prefix');
+const substitute = require('./src/remark/sustitute');
+const findreplace = require('./src/remark/findreplace');
+
+let options = {
+  replacements: {
+    COMPANY: 'brainCloud',
+    COPYRIGHT: `Copyright ${new Date().getFullYear()} brainCloud`,
+    'data.branding.codePrefix %>': '_bc'
+  },
+  prefix: '<%= ',
+}
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'brainCloud docs',
@@ -50,6 +65,12 @@ const config = {
           lastVersion: 'current',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
+          remarkPlugins: [
+            // interpolatev, 
+            // sectionPrefix,
+            // substitute,
+            [findreplace, options],
+          ],
         },
         blog: {
           showReadingTime: true,
