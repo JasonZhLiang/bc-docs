@@ -45,6 +45,21 @@ const config = {
     locales: ['en'],
   },
 
+  plugins: [
+    "./plugins/intercom.js",
+    // './src/plugin-interc',
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'release',
+        routeBasePath: 'release',
+        path: './release',
+        blogSidebarTitle: 'All posts',
+        blogSidebarCount: 'ALL',
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -126,6 +141,7 @@ const config = {
             label: 'API',
           },
           { to: '/blog', label: 'Blog', position: 'left' },
+          { to: '/release', label: 'Release', position: 'left' },
           // {
           //   href: 'https://github.com/JasonZhLiang/bc-docs',
           //   label: 'GitHub',
